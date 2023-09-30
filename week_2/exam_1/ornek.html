@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Örnek Web Sayfası</title>
+	<style>
+		body {
+			background-color: #ffcccc; /* arka plan rengi */
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			color: #333;
+			padding: 20px;
+		}
+
+		h1 {
+			margin-top: 0;
+			text-align: center;
+		}
+
+		form {
+			background-color: #fff;
+			border-radius: 5px;
+			padding: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		input[type="text"] {
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
+		}
+
+		input[type="submit"] {
+			background-color: #ff6666;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #ff4d4d;
+		}
+	</style>
+</head>
+<body>
+	<h1>Hoşgeldiniz</h1>
+	<form>
+		<label for="isim">İsim:</label>
+		<input type="text" id="isim" name="isim" required>
+
+		<label for="soyisim">Soyisim:</label>
+		<input type="text" id="soyisim" name="soyisim" required>
+
+		<input type="submit" value="Gönder">
+	</form>
+
+	<script>
+		// JavaScript kodunu buraya yazabilirsiniz
+	</script>
+</body>
+</html>
