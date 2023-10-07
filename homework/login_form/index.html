@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kullanıcı Adı Kontrolü</title>
+    <style>
+        input[type="text"] {
+            border: 1px solid #fa0202;
+            padding: 5px;
+            font-size: 16px;
+        }
+        
+        input[type="text"].invalid {
+            border: 2px solid red;  
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" id="username" name="username" oninput="validateUsername()">
+        <p id="validationMessage"></p>
+    </form>
+    <script>
+        function validateUsername() {
+            var username = document.getElementById("username").value;
+            var usernamePattern = /^[a-z]{1,10}$/; // Sadece küçük harf, en fazla 10 karakter
+
+            if (usernamePattern.test(username)) {
+                document.getElementById("username").classList.remove("invalid");
+                document.getElementById("validationMessage").textContent = "Kullanıcı adı geçerlidir.";
+            } else {
+                document.getElementById("username").classList.add("invalid");
+                document.getElementById("validationMessage").textContent = "Kullanıcı adı geçersizdir.";
+            }
+        }
+    </script>
+</body>
+</html>
