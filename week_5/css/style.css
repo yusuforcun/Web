@@ -1,0 +1,45 @@
+.üst
+{   margin: 0px;
+    padding: 0px;
+    background-color: rgb(76, 109, 98);
+    height: 200px;
+    width: 100%;
+}
+.secenek
+{
+    background-color: darkblue;
+    height: 40px;
+    width: 100%;
+}
+.solmenu
+{
+    float: left;
+    background-color: red;
+    height: 350px;
+    width: 60%;
+}
+.metin{
+    background-color: greenyellow;
+        height: 320px;
+            width: 90%;
+    margin: 1%;
+    
+}
+
+.menu
+{
+    float: left;
+    background-color:brown ;
+    height: 350px;
+    width: 40%;
+}
+.temizle
+{
+    clear: both;
+}
+.icerik
+{
+    background-color:rgb(23, 24, 25) ;
+    height: 380px;
+    width: 100%;
+}

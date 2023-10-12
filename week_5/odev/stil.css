@@ -1,0 +1,73 @@
+* {
+margin: 0;
+}
+html, body {
+  height: 100%;
+}
+
+
+.ust_kisim{
+  background-color:#103778 ;
+  width: 100% ;
+  min-height: 20%;
+}
+
+.sol_menu{
+  float: left ;
+  background-color:#BACBD9 ;
+  width: 40% ;
+  min-height: 50%;  
+}
+
+.kimlik
+{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color:#98A6A6 ;
+  width: 661px ;
+  min-height: 410px;
+}
+
+.isim_label{
+  margin-left: 20px;
+}
+
+.label{
+ margin-left: 20px;
+}
+
+.input{
+   margin-top: 20px;
+  background-color: white ;
+  border-radius: 20px;
+}
+
+.yuz
+{
+  margin-left: 170px;
+  margin-top: 30px;
+  max-height: 350px;
+  max-width: 250px;
+}
+
+.menu
+{
+  float: left ;
+  background-color:#759CBF ;
+  width: 60% ;
+  min-height: 50%;
+}
+
+.temizle
+{
+  clear: both ;
+}
+
+.alt_kisim
+{
+  background-color:#355B8C ;
+  width: 100% ;
+  min-height: 30%;
+}
