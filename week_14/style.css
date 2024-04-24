@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+#app {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#greeting {
+    color: green;
+}
+
+#changeButton {
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+#uygulama{
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#baslik{
+    color: green;
+}
+
+#buton{
+    padding: 10px;
+    cursor: pointer;
+}

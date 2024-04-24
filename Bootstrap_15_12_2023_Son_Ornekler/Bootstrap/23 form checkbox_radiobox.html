@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .zemin{background-color:blueviolet; color:white}
+        .sagaYasla{float:right}
+        
+    </style>
+</head>
+<body>
+
+ <div class="container zemin">
+    <h1 class="display-6">Araç Kayıt Formu</h1>
+    <form>
+    <div class="row mt-3">
+        <div class="col-md-6" >
+          
+                <div class="mb-3">
+                    <label for="marka" class="form-label">Araç Markası</label>
+                    <input type="text" name="marka" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="model" class="form-label">Araç Model</label>
+                    <input type="text" name="model" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="cikistarih" class="form-label">Trafiğe Çıkış Tarihi</label>
+                    <input type="date" name="cikistarih" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="il" class="form-label">Bulunduğu İl</label>
+                    <select name="il" class="form-control">
+                        <option value="34">İstanbul</option>
+                        <option value="06">Ankara</option>
+                        <option value="35">İzmir</option>
+                    </select>
+                </div>
+               
+          
+        </div><!-- div md-6-->
+        <div class="col-md-6">
+            <!-- Kiralık mı EVET/HAYIR radio buttonları-->
+            <div class="mb-3">
+
+                 <label for="kiralikmi">Araç Kiralık mı?</label> <br>
+                 <input class="form-check-input" type="radio" name="kiralikmi" checked>
+                <label class="form-check-label" for="kiralikEvet">
+                    Evet
+                </label>
+
+                <input class="form-check-input" type="radio" name="kiralikmi" >
+                <label class="form-check-label" for="kiralikHayir">
+                Hayır
+                </label>
+            </div><!-- mb-3-->
+           <!-- Kilometresi için -->
+            <div class="mb-3">
+                <label for="arackm">Kilometresi</label>
+                 <input type="number" class="form-control" name="arackm">
+            </div>
+           <div class="mb-3">
+                <label for="ekozellikler">Ek Özellikler</label>
+                <div class="form-check"><!-- Hız sabitleme onay kutusu-->
+                    <input class="form-check-input" type="checkbox" name="hizsabitleme" >
+                    <label class="form-check-label" for="hizsabitleme">
+                      Cruise Control(Hız Sabitleme)
+                    </label>
+                  </div>
+                  <div class="form-check"><!-- şerit takibi onay kutusu-->
+                    <input class="form-check-input" type="checkbox" name="serittakibi">
+                    <label class="form-check-label" for="serittakibi">
+                      Şerit Takibi
+                    </label>
+                </div>
+                  <div class="form-check"><!-- koltuk ısıtma onay kutusu-->
+                    <input class="form-check-input" type="checkbox" name="koltukisitma">
+                    <label class="form-check-label" for="koltukisitma">
+                      Koltuk Isıtma
+                    </label>
+                </div><!-- mb-3-->
+
+                <div class="mb-3">
+                    <label for="gunlukfiyat">Günlük Kiralama Bedeli</label>
+                    <input type="number" name="gunlukfiyat" class="form-control" value="1500">
+                </div>
+                <div class="mb-3">
+                    <label for="gunsayisi">Gün Sayısı</label>
+                    <select name="gunsayisi" class="form-control">
+                        <option value="1">1 gün</option>
+                        <option value="2">2 gün</option>
+                        <option value="7">1 hafta</option>
+                        <option value="30">1 ay</option>
+                    </select>
+                </div><!-- mb-3-->
+          
+            <button type="submit" class="btn btn-light mb-3 sagaYasla">Formu Kaydet</button>
+          
+
+        </div><!-- col-md-6-->
+        
+    </div> <!-- row -->
+  
+</form>
+ </div><!--container-->     
+    
+</body>
+</html>

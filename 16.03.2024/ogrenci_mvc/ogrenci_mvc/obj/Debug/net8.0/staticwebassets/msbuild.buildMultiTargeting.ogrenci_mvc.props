@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ogrenci_mvc.props" />
+</Project>

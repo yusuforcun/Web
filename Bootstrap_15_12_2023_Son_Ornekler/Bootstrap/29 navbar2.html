@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Navbar Örnek</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+  <script src="js/jquery-3.6.4.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+            .zemin{
+                
+              background-color: rgb(2, 27, 80);
+                color:white;
+            }
+            .yesil{background-color: green; color:white}
+            .pembe{background-color: pink; color:#000}
+            .kirmizi{background-color: red; color:#FFF}
+
+            .h200{ height: 200px;}
+
+            .navbar-brand{color:#FFF}
+            .navbar-brand:hover{color:yellow; font-size: 23px;}
+            /* ziyaret edilmemiş */
+            .nav-link {color: white;  }
+            /* ziyaret edilmiş */
+            .nav-link:visited {color: #c9c9c9;}
+            /* farenin üzerine getirildiği */
+            .nav-link:hover {color: yellow; 
+              flex-grow: 1;
+             /* border-top: 1px solid rgb(235, 232, 232);*/
+              border-bottom: 1px solid rgb(235, 232, 232);
+              margin-left: 2px;
+            }
+            /* seçilen link */
+            .nav-link .active {color: yellow; }
+            .dropdown-menu{
+              background-color: rgb(37, 151, 8);
+              
+            }
+            .dropdown-item{ color:#FFF;}
+            /*Alttaki kısım arama için*/
+            .ms-n5 {margin-left: -40px;}
+
+            .footer-bakcground{  /* Alt kısım renk */
+                background-color: rgb(46, 45, 45);
+                color:#c9c9c9;
+                height:200px;
+              }
+            
+              .footer-menu ul{
+                margin-top:20px;
+                margin-left:10px;
+                line-height: 25px;
+              }
+              .footer-menu a{
+                color:rgb(231, 231, 230);
+                text-decoration: none;
+              }
+
+              .footer-menu a:hover{
+                text-decoration: underline;
+              }
+
+              .social-media{
+                margin-top:20px;
+                line-height: 40px;
+                list-style-type: none;
+              }
+              .social-media li img:hover{
+                box-shadow: 5px 5px 2px #5a5959;
+                -moz-box-shadow: 5px 5px 5px #ccc;
+                -webkit-box-shadow: 5px 5px 5px #ccc;
+                -khtml-box-shadow: 5px 5px 5px #ccc;
+              }
+              .address{
+                margin-top:25px;
+                line-height: 25px;
+                list-style-type: none;
+              }
+              .top-links{
+                margin-top:20px; /* Üst boşluk*/
+               
+                list-style-type: none; /* noktalar görünmesin*/
+              }
+              .top-links a{
+                color:rgb(231, 231, 230);
+                text-decoration: none; /* Link altı çizilmesin*/
+              }
+              .top-links  a:hover{
+                text-decoration: underline;
+              }
+    </style>
+</head>
+<body>
+<!-- Yeni 5.3 -->
+<nav class="navbar  navbar-expand-lg zemin">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">XYZ Company</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Ana Sayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hakkimda.html">Hakkimda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kitapyorum.html">Kitap yorumları</a>
+          </li>
+
+          <!-- dropdown başlangıç-->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Kategoriler
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">C#</a></li>
+              <li><a class="dropdown-item" href="#">Python</a></li>
+              <li><a class="dropdown-item" href="#">C++</a></li>
+              <li><a class="dropdown-item" href="#">PHP</a></li>
+              <li><a class="dropdown-item" href="#">Java</a></li>
+              <li><a class="dropdown-item" href="#">Asp.net Core</a></li>
+            </ul>
+          </li>
+        <!-- dropdown bitiş-->
+    <!-- dropdown başlangıç-->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Web Kategorisi
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">HTML</a></li>
+        <li><a class="dropdown-item" href="#">CSS</a></li>
+        <li><a class="dropdown-item" href="#">JavaScript</a></li>
+        <li><a class="dropdown-item" href="#">Bootstrap</a></li>
+        <li><a class="dropdown-item" href="#">Vue.js</a></li>
+        <li><a class="dropdown-item" href="#">Angular JS</a></li>
+        <li><a class="dropdown-item" href="#">REACT</a></li>
+      </ul>
+    </li>
+  <!-- dropdown bitiş-->
+        </ul>
+        <!-- Arama kısmı-->
+        <form class="d-flex" role="search">
+          <div class="row">
+            <div class="mx-auto">
+               
+                <div class="input-group">
+                    <input class="form-control border-end-0 border rounded-pill" type="search" placeholder="Aranan bilgi..." id="example-search-input">
+                    <span class="input-group-append">
+                        <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        </form>
+        <!-- Arama bitiş-->
+          
+      </div>
+    </div>
+  </nav>
+<!-- navbar bitiş-->
+
+<div class="container-fluid">
+  <div class="row">
+    
+    <!-- sol kısım 9 birim-->
+    <div class="col-md-9 kirmizi h200">
+        <h1>sol kısım</h1>
+    </div>
+    <!-- sol 9 birim bitiş-->
+
+    <!-- sağ kısım-->
+    <div class="col-md-3 yesil h200">
+        <h1>sağ kısım</h1>
+    </div>
+    <!-- sağ kısım 3 birim-->
+
+  </div><!--row bitiş-->
+    
+  <!-- footer yani alt kısım-->
+  <div class="row footer-bakcground">
+     <div class="col">
+      <div class="footer-menu">
+
+        <ul>
+          <li>
+            <a href="index.html">Ana Sayfa</a>
+          </li>
+          <li>
+            <a href="hakkimizda.html">Hakkımızda</a>
+          </li>
+          <li>
+            <a href="kitapyorum.html">Kitap Yorumları</a>
+          </li>
+          <li>
+            <a href="kategoriler.html">Kategoriler</a>
+          </li>
+          <li>
+            <a href="iletisim.html">İletişim</a>
+          </li>
+        </ul>
+
+      </div><!-- footer-menu -->
+       
+
+     </div>
+     <div class="col">
+        <!-- Sosyal medya-->
+          
+          <ul class="social-media">
+            <li>
+              <a href="http://facebook.com">
+                <img src="images/sosyal_facebook.png" height="35" alt="">
+              </a>
+               
+            </li>
+            <li>
+              <a href="http://twitter.com">
+                <img src="images/sosyal_twitter.png" height="35" alt="">
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://linkedin.com">
+                <img src="images/sosyal_linkedin.png" height="35" alt="">
+              </a>
+            </li>
+          </ul>
+     </div>
+     <div class="col">
+          <ul class="address">
+              <li>Barış Mah. Barış Sokak</li>
+              <li>Barış Cad. No:2</li>
+              <li>Beylikdüzü İstanbul</li>
+              <li>E-posta: abc@abc.com</li>
+              <li>Tel: 0212 233 44 55</li>
+          </ul> 
+     </div>
+     <div class="col">
+        <ul class="top-links">
+          <li><a href="http://www.abc.com">ABC</a></li>
+          <li><a href="http://www.abc.com">ABC</a></li>
+          <li><a href="http://www.abc.com">ABC</a></li>
+          <li><a href="http://www.abc.com">ABC</a></li>
+        </ul>
+
+     </div>
+  </div>
+  <!-- footer alt kısım bitiş-->
+
+</div><!-- container-->
+
+</body>
+</html>
+

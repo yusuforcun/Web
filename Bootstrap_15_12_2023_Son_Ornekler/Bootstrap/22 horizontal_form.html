@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Yatay Form</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .zemin{
+              background-color: tomato; 
+              color:#FFF;
+            }
+    </style>
+</head>
+<body class="zemin">
+
+    <div class="container mt-3">
+        <form>
+            <div class="col-md-6"><!-- sütun aç-->
+
+         
+            <!-- adi -->
+            <div class="row mb-1">
+                <label for="adi" class="col-sm-2 col-form-label">Adi</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="adi" maxlength="20" id="adi">
+                </div>
+              </div>
+
+              <!-- soyadi-->
+              <div class="row mb-1">
+                <label for="adi" class="col-sm-2 col-form-label">Soyadı</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" maxlength="20" name="soyadi">
+                </div>
+              </div>
+
+               <!-- tc-->
+               <div class="row mb-1">
+                <label for="tckimlikno" class="col-sm-2 col-form-label">TC Kimlik</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="tckimlikno" maxlength="11" placeholder="Maks. 11 hane giriniz.">
+                </div>
+              </div>
+
+              <!-- okulno-->
+              <div class="row mb-1">
+                <label for="okulno" class="col-sm-2 col-form-label">Okul No</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="okulno" maxlength="5" placeholder="5 hane giriniz, okul numarasını giriniz">
+                </div>
+              </div>
+
+              <!-- Bölüm-->
+              <div class="row mb-1">
+                <label for="bolum" class="col-sm-2 col-form-label">Bölüm</label>
+                <div class="col-sm-10">
+                 
+                    <select name="bolum" class="form-control">
+                        <option value="bilisim">Bilişim Tek.</option>
+                        <option value="biyomedikal">Biyomedikal</option>
+                        <option value="elektronik">Elektronik</option>
+                        <option value="kimya">Kimya</option>
+                    </select>
+                </div>
+              </div>
+               <!-- Sınıf-->
+               <div class="row mb-1">
+                <label for="sinif" class="col-sm-2 col-form-label">Sınıf</label>
+                <div class="col-sm-10">
+                 
+                    <select name="sinif" class="form-control">
+                        <option value="9a">9-A</option>
+                        <option value="9b">9-B</option>
+                        <option value="10a">10-A</option>
+                        <option value="10b">10-B</option>
+                        <option value="11a">11-A</option>
+                        <option value="11b">11-B</option>
+                        <option value="12a">12-A</option>
+                        <option value="12b">12-B</option>
+                    </select>
+                </div>
+              </div>
+<!-- cinsiyet-->
+              <fieldset class="row mb-1">
+                <legend class="col-form-label col-sm-2 pt-0">Cinsiyet</legend>
+
+                <div class="col-sm-10">
+                 
+                    <input class="form-check-input" type="radio" name="cinsiyet">
+                    <label class="form-check-label" for="cinsiyet">
+                      Erkek
+                    </label>
+
+                  <input class="form-check-input" type="radio" name="cinsiyet" checked>
+                  <label class="form-check-label" for="cinsiyet">
+                  Kadın
+                </label>
+                </div><!-- sm-10-->
+            </fieldset>
+            
+            <button class="btn btn-secondary">Formu Kaydet</button>
+            </div><!-- sütunu bitir-->
+
+
+        </form>
+        
+
+
+    </div><!--container-->
+    
+</body>
+</html>

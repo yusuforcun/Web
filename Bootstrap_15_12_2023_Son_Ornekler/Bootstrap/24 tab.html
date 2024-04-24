@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Control</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+        .zemin{background-color: rgb(4, 62, 15);  
+            color:#FFF;
+            text-decoration: none;
+        }
+        .nav-link{color:#FFF;}
+        .nav-link:hover{color:yellow;}
+    </style>
+   
+  </head>
+<body class="zemin">
+
+<div class="container mt-3">
+    <!-- tab kontrol başlık (kulakcıklar) -->
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        
+        <!-- 1. kulakcık aktif-->  
+          <button class="nav-link active" id="tab-temelbilgiler" data-bs-toggle="tab" 
+          data-bs-target="#temelbilgiler" type="button" role="tab" 
+          aria-controls="temelbilgiler" aria-selected="true">Temel Bilgiler</button>
+         
+          <!-- 2. kulakcık -->  
+          <button class="nav-link" id="tab-detay1" data-bs-toggle="tab" 
+          data-bs-target="#detay1" type="button" role="tab" 
+          aria-controls="detay1" aria-selected="false">Detay(1)</button>
+         
+          <!-- 3. kulakcık --> 
+          <button class="nav-link" id="tab-detay2" data-bs-toggle="tab" 
+          data-bs-target="#detay2" type="button" role="tab" aria-controls="detay2" 
+          aria-selected="false">Detay(2)</button>
+         
+          <!-- 4. kulacık -->
+          <button class="nav-link" id="tab-detay3" data-bs-toggle="tab" 
+          data-bs-target="#detay3" type="button" role="tab" aria-controls="detay3" 
+          aria-selected="false">Detay(3)</button>
+
+          <!-- 5. kulacık -->
+          <button class="nav-link" id="tab-detay4" data-bs-toggle="tab" 
+          data-bs-target="#detay4" type="button" role="tab" aria-controls="detay4" 
+          aria-selected="false">Detay(4)</button>
+
+
+        </div>
+      </nav>
+      <!--kulakcıklar bitiş -->
+
+      <!-- İçerik -->
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="temelbilgiler" role="tabpanel" 
+        aria-labelledby="temelbilgiler">
+        <!-- İçerik başlangıç -->
+            <form>
+                <div class="mt-3">
+                    <label for="adi">Adınız</label>
+                    <input type="text" class="form-control" name="adi">
+                </div>
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-light">Formu Kaydet</button>
+                </div>
+
+            </form>
+    
+    <!-- içerik bitiş-->
+    </div>
+        <div class="tab-pane fade" id="detay1" role="tabpanel" aria-labelledby="detay1">
+         <!-- 2. sayfa-->
+         <!-- İçerik başlangıç -->
+         <div class="mt-3">
+            <label for="adi">TC Kimlik</label>
+            <input type="text" class="form-control" name="tc">
+        </div>
+        <!-- İçerik bitiş -->
+
+
+        </div><!-- bitiş-->
+        <div class="tab-pane fade" id="detay2" role="tabpanel" aria-labelledby="detay2">
+        <!-- tab başlangıç-->
+                <div class="mt-3">
+                    <label for="resim">Resim Yükleme</label>
+                    <input type="file" name="resim" id="resim">
+
+                </div>
+        </div><!-- bitiş-->
+
+        <div class="tab-pane fade" id="detay3" role="tabpanel" aria-labelledby="detay3">
+            ... bilgi1 ...
+        </div><!-- bitiş-->
+
+        <div class="tab-pane fade" id="detay4" role="tabpanel" aria-labelledby="detay4">
+            ... bilgi2 ...
+        </div><!-- bitiş-->
+
+      </div>
+</div><!-- container-->
+
+
+
+    
+</body>
+</html>

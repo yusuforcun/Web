@@ -1,0 +1,28 @@
+.üst{
+    height: 200px;
+    width: 100%;
+    background-image: url(indirim.jpg);
+    background-color: rgb(255, 255, 255);
+}
+
+.icerik{
+    background-color: rgb(rgb(123, 65, 65));
+    height: 500px;
+    width: 100%;
+}
+
+.ürün{
+    height: 500px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.ürün-kismi{
+    background-color: rgb(53, 66, 66);
+    height: 400px;
+    width: 100%;
+    border-radius: 100px;
+    border: 2px solid red;
+    background-image: url(kulaklık.jpg);
+}
+

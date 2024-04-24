@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid </title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.css">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .yukseklik_100{height: 100px;}
+        .kirmizi{background-color: red;color:white;}
+        .yesil{background-color: green;color:white;}
+        .mavi{background-color: blue;color:white;}
+        .pembe{background-color: pink; color:white;}
+        .domates{background-color: tomato;color:white;}
+        .lacivert{background-color: darkblue; color:white}
+        .bordo{background-color: maroon; color:white}
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div class="row"><!-- bir satır oluştur-->
+            <div class="col yesil yukseklik_100">1.sütun</div><!-- sütun oluşturur-->
+            <div class="col mavi yukseklik_100">2. sütun</div>
+            <div class="col kirmizi yukseklik_100">3. sütun</div>
+        </div>
+
+        <div class="row">
+            <div class="col pembe yukseklik_100">1. sütun</div>
+            <div class="col domates yukseklik_100">2. sütun</div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 lacivert yukseklik_100"> 8 parça</div>
+            <div class="col-4 bordo yukseklik_100">4 parça</div>
+        </div>
+
+        <!-- Bootstrap renkleri -->
+        <div class="row">
+            <div class="col bg-info">Mavi zemin</div>
+            <div class="col bg-warning">Sarı zemin</div>
+            <div class="col bg-danger">Alarm</div>
+            <div class="col bg-dark">Koyu zemin</div>
+
+        </div>
+   </div>
+
+   
+
+</body>
+</html>

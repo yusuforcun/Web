@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+      .ozelmavi{
+          background-color: rgb(4, 166, 241);
+          color:rgb(229, 245, 6)
+      }
+      .ozelmavi:hover{
+        background-color: rgb(3, 72, 104);
+        color:white;
+      }
+      
+    </style>
+
+</head>
+<body>  
+    <div class="container mt-3">
+        <button type="button" class="btn btn-primary">
+            Mesajınız var <span class="badge text-bg-warning">4</span>
+        </button>
+
+        <button type="button" class="btn btn-danger">
+            Virüs bulundu <span class="badge text-bg-light">100</span>
+        </button>
+
+        <button type="button" class="btn ozelmavi">
+            Özel buton <span class="badge text-bg-warning">20</span>
+        </button>
+
+        <h3>Butonun köşesinde bilgi verme</h3>
+        <button type="button" class="btn btn-primary position-relative">
+            Gelen Kutusu
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+               149
+              <span class="visually-hidden">Okunmamış Mesaj</span>
+            </span>
+          </button>
+
+
+        <h3>Span etiketleri için badge</h3>
+    
+        <br>
+        Ödemeniz gereken asgari tutar <span class="badge text-bg-warning">2000 TL</span>
+        <br>
+        Hesap özeti borcu <span class="badge text-bg-success">7000 TL</span>
+            <br><br>
+        <span class="badge text-bg-primary">Primary</span><!-- mavi -->
+        <span class="badge text-bg-secondary">Secondary</span><!-- gri -->
+        <span class="badge text-bg-success">Success</span><!-- yeşil-->
+        <span class="badge text-bg-danger">Danger</span><!-- kırmızı-->
+        <span class="badge text-bg-warning">Warning</span><!-- uyarı sarı-->
+        <span class="badge text-bg-info">Info</span><!-- bilgi açık mavi-->
+        <span class="badge text-bg-light">Light</span><!-- beyaz-->
+        <span class="badge text-bg-dark">Dark</span> <!-- koyu siyah-->
+
+          <h3>Yuvarlatılmış haplar</h3>
+          <span class="badge rounded-pill text-bg-primary">Primary</span>
+            <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+            <span class="badge rounded-pill text-bg-success">Success</span>
+            <span class="badge rounded-pill text-bg-danger">Danger</span>
+            <span class="badge rounded-pill text-bg-warning">Warning</span>
+            <span class="badge rounded-pill text-bg-info">Info</span>
+            <span class="badge rounded-pill text-bg-light">Light</span>
+            <span class="badge rounded-pill text-bg-dark">Dark</span>
+
+
+    </div><!-- container-->
+
+
+
+</body>
+</html>

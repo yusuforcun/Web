@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0px;
+            height: 100%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-image: url('zeminresmi.jpg');
+        }
+
+        #skor_board {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 1%;
+            width: 25%;
+            height: 20%;
+            background-color: #406882;
+            border-radius: 10px;
+            right: 10px;
+            color: aliceblue;
+            position: absolute;
+            font-size: 1.5em;
+            display: none;
+        }
+
+        #skor_board .d_y_baslik {
+            text-align: left;
+            width: 50%;
+            float: left;
+        }
+
+        #skor_board #d_sayisi,
+        #y_sayisi {
+            text-align: right;
+            width: 40%;
+            float: left;
+        }
+
+        #skor_board #puan {
+            font-size: 2em;
+            text-align: center;
+            width: 80%;
+            margin: 13px;
+            float: left;
+        }
+
+        #soru_kutusu {
+            margin: auto;
+            padding: 1%;
+            width: 70%;
+            height: 53%;
+            background-color: #406882;
+            top: 26%;
+            position: relative;
+            border-radius: 30px;
+            box-shadow: 5px 10px black;
+            display: none;
+        }
+
+        #soru_kutusu #soru_metni {
+            font-size: 2em;
+            margin: auto;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            background-color: #B1D0E0;
+            width: 90%;
+            border-radius: 20px;
+            height: 50%;
+            box-shadow: 0px 0px 10px inset darkcyan;
+            text-align: center;
+            padding: 2%;
+
+        }
+
+        #soru_kutusu #cevaplar {
+            text-align: center;
+
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+
+        #soru_kutusu #a_sikki,
+        #b_sikki,
+        #c_sikki,
+        #d_sikki {
+            padding: 5px;
+            margin: 5px;
+            background-color: #5998AB;
+            border-radius: 10px;
+            font-size: 1.1em;
+            line-height: 1.1em;
+        }
+
+        .baslama_btn {
+            width: 30%;
+            height: 20%;
+            background-color: #406882;
+            font-size: 2em;
+            margin: auto;
+            border-radius: 50px;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+
+        }
+
+        .baslama_btn:hover {
+            background-color: antiquewhite;
+            color: #406882;
+        }
+    </style>
+
+    <script>
+
+        let sorular = [
+            {
+                "soru": "1) “Sinekli Bakkal” Romanının Yazarı Aşağıdakilerden Hangisidir? ",
+                "a_sikki": " Reşat Nuri Güntekin ",
+                "b_sikki": " Halide Edip Adıvar ",
+                "c_sikki": " Ziya Gökalp ",
+                "d_sikki": " Ömer Seyfettin ",
+                "cevap": "B"
+            },
+            {
+                "soru": "2) Aşağıda Verilen İlk Çağ Uygarlıklarından Hangisi Yazıyı İcat Etmiştir? ",
+                "a_sikki": " Hititler ",
+                "b_sikki": " Elamlar ",
+                "c_sikki": " Sümerler ",
+                "d_sikki": " Urartular",
+                "cevap": "C"
+            },
+            {
+                "soru": "3) Tsunami Felaketinde En Fazla Zarar Gören Güney Asya Ülkesi Aşağıdakilerden Hangisidir?",
+                "a_sikki": " Endonezya ",
+                "b_sikki": " Srilanka ",
+                "c_sikki": " Tayland ",
+                "d_sikki": " Hindistan",
+                "cevap": "A"
+            },
+            {
+                "soru": "4) 2003 Yılında Euro Vizyon Şarkı Yarışmasında Ülkemizi Temsil Eden ve Yarışmada Birinci Gelen Sanatçımız Kimdir?",
+                "a_sikki": " Grup Athena ",
+                "b_sikki": " Sertap Erener ",
+                "c_sikki": " Şebnem Paker ",
+                "d_sikki": " Ajda Pekkan",
+                "cevap": "B"
+            },
+            {
+                "soru": "5) Mustafa Kemal Atatürk’ün Nüfusa Kayıtlı Olduğu İl Hangisidir?",
+                "a_sikki": " Bursa ",
+                "b_sikki": " Ankara ",
+                "c_sikki": " İstanbul ",
+                "d_sikki": " Gaziantep",
+                "cevap": "D"
+            },
+            {
+                "soru": "6)Aşağıdakilerden Hangisi Dünya Sağlık Örgütünün Kısaltılmış İsmidir?",
+                "a_sikki": " Uhw ",
+                "b_sikki": " Unıcef ",
+                "c_sikki": " Who ",
+                "d_sikki": " Nato",
+                "cevap": "C"
+            },
+            {
+                "soru": "7)Romen Rakamında Hangi Sayı Yoktur?",
+                "a_sikki": "0",
+                "b_sikki": "50",
+                "c_sikki": "100",
+                "d_sikki": "1000",
+                "cevap": "A"
+            },
+            {
+                "soru": "8)Bir Gün Kaç Saniyedir?",
+                "a_sikki": "86000",
+                "b_sikki": "88600",
+                "c_sikki": "86400",
+                "d_sikki": "84800",
+                "cevap": "C"
+            },
+            {
+                "soru": "9)Üç Büyük Dince Kutsal Sayılan Şehir Hangisidir?",
+                "a_sikki": " Mekke ",
+                "b_sikki": " Kudüs ",
+                "c_sikki": " Roma ",
+                "d_sikki": " İstanbul",
+                "cevap": "B"
+            },
+            {
+                "soru": "10)Hangi İlimizde Demiryolu Yoktur?",
+                "a_sikki": " Batman ",
+                "b_sikki": " Kütahya ",
+                "c_sikki": " Aydın ",
+                "d_sikki": " Muğla",
+                "cevap": "D"
+            },
+            {
+                "soru": "11)Hangi Ülkenin İki Tane Başkenti Vardır?",
+                "a_sikki": "Güney Afrika ",
+                "b_sikki": "Senegal ",
+                "c_sikki": "El Salvador ",
+                "d_sikki": "Venezuela ",
+                "cevap": "A"
+            },
+            {
+                "soru": "12)Cevdet Bey ve Oğulları Eseri Kime Aittir?",
+                "a_sikki": "Orhan Pamuk ",
+                "b_sikki": "Yahya Kemal Bayatlı ",
+                "c_sikki": "Atilla İlhan ",
+                "d_sikki": "Samipaşazade Sezai ",
+                "cevap": "A"
+            },
+            {
+                "soru": "13)Bir Sebepten Dolayı Tek Kulağına Küpe Takan Osmanlı Padişahı Kimdir?",
+                "a_sikki": "Kanuni Sultan Süleyman ",
+                "b_sikki": "Yavuz Sultan Selim ",
+                "c_sikki": "Orhan Bey ",
+                "d_sikki": "Fatih Sultan Selim ",
+                "cevap": "B"
+            },
+            {
+                "soru": "14)Aşağıdaki Ülkelerden Hangisinin Nüfusu Daha Fazladır?",
+                "a_sikki": "İspanya ",
+                "b_sikki": "Fransa ",
+                "c_sikki": "İngiltere ",
+                "d_sikki": "Almanya ",
+                "cevap": "D"
+            },
+            {
+                "soru": "15) Aspirinin Hammaddesi Nedir?",
+                "a_sikki": "Söğüt ",
+                "b_sikki": "Köknar ",
+                "c_sikki": "Kavak ",
+                "d_sikki": "Meşe",
+                "cevap": "A"
+            },
+            {
+                "soru": "16) Labirentin Gölgesinde ve Sembollerin Gölgesinde adlı fantastik romanların yazarı kimdir?",
+                "a_sikki": "Haldun Taner  ",
+                "b_sikki": "Mehmet Rauf  ",
+                "c_sikki": "Yaşar Kemal  ",
+                "d_sikki": "Yahya Karakurt",
+                "cevap": "D"
+            }
+        ];
+
+    </script>
+    <script>
+        // kullanılacak değişkenleri tanımla
+        let sorunun_cevabi = "";
+        let puan = 0;
+        let dogru_sayisi = 0;
+        let yanlis_sayisi = 0;
+        let soru_numarasi = 0;
+
+
+        function basa_don() {
+            document.getElementById("soru_kutusu").style.display = "none";
+            document.getElementById("skor_board").style.display = "none";
+
+
+            sorunun_cevabi = "";
+            puan = 0;
+            dogru_sayisi = 0;
+            yanlis_sayisi = 0;
+            soru_numarasi = 0;
+            skor_yaz();
+        }
+
+
+        function soru_getir(s_no) {
+            document.getElementById("soru_kutusu").style.display = "block";
+            document.getElementById("skor_board").style.display = "block";
+
+
+
+            if (soru_numarasi == sorular.length) {
+                swal({
+                    title: "Sorular Bitti",
+                    text: "Tebrikler",
+                    icon: "success",
+                    button: "Başa Dönmek için tıklayın.",
+                }).then(function () { basa_don() });
+
+
+            }
+
+
+            document.getElementById("soru_metni").innerHTML = sorular[s_no].soru;
+            document.getElementById("a_sikki").innerHTML = sorular[s_no].a_sikki;
+            document.getElementById("b_sikki").innerHTML = sorular[s_no].b_sikki;
+            document.getElementById("c_sikki").innerHTML = sorular[s_no].c_sikki;
+            document.getElementById("d_sikki").innerHTML = sorular[s_no].d_sikki;
+            sorunun_cevabi = sorular[s_no].cevap;
+        }
+
+        function skor_yaz() {
+            document.getElementById("d_sayisi").innerHTML = dogru_sayisi;
+            document.getElementById("y_sayisi").innerHTML = yanlis_sayisi;
+            document.getElementById("p_yazisi").innerHTML = puan;
+        }
+
+        function cevaplandi(hangi_sik) {
+            kullanici_secimi = hangi_sik.getAttribute("data-secim"); // kullanıcı seçimi alındı.
+
+            if (sorunun_cevabi == kullanici_secimi) {
+                puan = puan + 10;
+                dogru_sayisi++;
+                skor_yaz();
+
+                swal({
+                    title: "İyi İş",
+                    text: "Tebrikler",
+                    icon: "success",
+                    button: "Aww yiss!",
+                }).then(function () { soru_ilerlet() });
+
+
+
+
+            } else {
+                yanlis_sayisi++;
+                skor_yaz();
+                swal({
+                    title: "Üzgünüz",
+                    text: "Hatalı Cevap Verdiniz",
+                    icon: "warning",
+                    button: "Aww yiss!",
+                }).then(function () { soru_ilerlet() });
+
+
+            }
+
+        }
+
+        function soru_ilerlet() {
+            soru_numarasi++;
+            soru_getir(soru_numarasi);
+        }
+
+    </script>
+
+</head>
+
+<body><button class="baslama_btn" onclick="soru_getir(0)">Yarışa Başla</button>
+    <!--SKOR BOARD-->
+    <div id="skor_board">
+        <div class="d_y_baslik">Doğru Sayısı</div>
+        <div id="d_sayisi">-</div>
+        <div class="d_y_baslik">Yanlış Sayısı</div>
+        <div id="y_sayisi">-</div>
+        <div id="puan">PUAN: <span id="p_yazisi">-</span></div>
+    </div>
+
+
+    <div id="soru_kutusu">
+        <div id="soru_metni">Soru Metni</div>
+        <div id="cevaplar">
+            <div id="a_sikki" data-secim="A" onclick="cevaplandi(this)">A </div>
+            <div id="b_sikki" data-secim="B" onclick="cevaplandi(this)">B </div>
+            <div id="c_sikki" data-secim="C" onclick="cevaplandi(this)">C </div>
+            <div id="d_sikki" data-secim="D" onclick="cevaplandi(this)">D </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

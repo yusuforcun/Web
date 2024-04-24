@@ -1,0 +1,75 @@
+body{text-align:center;}
+.Cerceve{
+position: relative;
+width: 800px;
+height:350px;
+top:5px;
+border-radius: 5px;
+box-shadow: 0 2px 8px rgba(0,0,0,.3);  
+text-align: center;
+margin: 0 auto;  
+}
+.Editor{
+display: inline-block;
+text-align:left;
+width:96%;
+height:83%;
+outline: 0;
+padding:5px;
+border:1px solid #ccc;
+border-radius: 4px; 
+outline: 0;
+}
+
+button {
+ -webkit-appearance: none;
+  padding: 1px;
+  min-width: 35px;
+  min-height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: none;
+  background-image:url('https://i.hizliresim.com/ojM6Xq.png');
+  background-repeat:no-repeat;
+
+}
+/*--------Mesaj Kutusu Css------------*/
+.Msj{
+display:none;
+position:absolute; width:120px; top:40px; right:75px;
+border-radius:5px; background:#70DCD1;
+box-shadow:0 2px 8px rgba(0,0,0,5);}
+.Msj input{height:20px;width:110px;margin:3px 3px;border-radius:5px;}
+.Msj button{background:#70DCD1;border-radius: 10px;}
+/*--------------------*/
+button.E-bold{background-position:0px 0px;}
+button.E-italic{background-position:-35px 0px;}
+button.E-underline{background-position:-70px 0px;}
+button.E-strikethrough{background-position:-108px 0px;}
+button.E-justifyLeft{background-position:-145px 0px;}
+button.E-justifyCenter{background-position:-180px 0px;}
+button.E-justifyRight{background-position:-215px 0px;}
+button.E-justifyFull{background-position:-251px 0px;}
+button.E-indent{background-position:-288px 0px;}
+button.E-outdent{background-position:-324px 0px;}
+button.E-insertUnorderedList{background-position:-359px 0px;}
+button.E-insertOrderedList{background-position:-395px 0px;}
+button.E-backColor-yellow{background-position:-430px 0px;}
+button.E-Msj-createLink{background-position:-465px 0px;}
+button.E-Msj-foreColor{
+background:url('http://www.iconsdb.com/icons/preview/color/70DCD1/edit-xl.png'); 
+background-repeat:no-repeat;
+background-size:98% 98%}
+
+button.E-Msj-fontName{
+background:url('https://maxcdn.icons8.com/windows8/PNG/26/Editing/generic_text-26.png'); 
+background-repeat:no-repeat;
+background-size:98% 98%  
+}
+/*Html Kodu göster Css*/
+textarea{
+margin-top:40px;
+width: 800px;
+height:150px;
+display:none;
+}
